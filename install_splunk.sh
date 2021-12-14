@@ -16,5 +16,5 @@ useradd $SPLUNK_USER
 groupadd $SPLUNK_USER
 chown -R splunk:splunk $SPLUNK_HOME
 sudo -u $SPLUNK_USER $SPLUNK_HOME/bin/splunk start --accept-license
-$SPLUNK_HOME/bin/splunk enable boot-start
+$SPLUNK_HOME/bin/splunk enable boot-start -user $SPLUNK_USER
 chown -R splunk:splunk $SPLUNK_HOME
