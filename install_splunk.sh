@@ -12,8 +12,9 @@ cat > $SPLUNK_HOME/etc/system/local/user-seed.conf <<EOF
 USERNAME = admin
 PASSWORD = $adminpass
 EOF
+/opt/splunk/bin/splunk enable boot-start
 useradd $SPLUNK_USER
 groupadd $SPLUNK_USER
 chown -R splunk:splunk $SPLUNK_HOME
 sudo -u $SPLUNK_USER /opt/splunk/bin/splunk start --accept-license
-sudo -u $SPLUNK_USER /opt/splunk/bin/splunk enable boot-start
+/opt/splunk/bin/splunk enable boot-start
