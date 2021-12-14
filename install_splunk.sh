@@ -18,3 +18,4 @@ chown -R splunk:splunk $SPLUNK_HOME
 sudo -u $SPLUNK_USER $SPLUNK_HOME/bin/splunk start --accept-license
 sudo -u $SPLUNK_USER $SPLUNK_HOME/bin/splunk stop
 $SPLUNK_HOME/bin/splunk enable boot-start -user $SPLUNK_USER -systemd-managed 1
+sudo -u $SPLUNK_USER $SPLUNK_HOME/bin/splunk start
