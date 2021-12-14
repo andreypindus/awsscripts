@@ -15,5 +15,6 @@ EOF
 useradd $SPLUNK_USER
 groupadd $SPLUNK_USER
 chown -R splunk:splunk $SPLUNK_HOME
-sudo -u $SPLUNK_USER /opt/splunk/bin/splunk start --accept-license
-/opt/splunk/bin/splunk enable boot-start
+sudo -u $SPLUNK_USER $SPLUNK_HOME/bin/splunk start --accept-license
+$SPLUNK_HOME/bin/splunk enable boot-start
+chown -R splunk:splunk $SPLUNK_HOME
